@@ -1,0 +1,332 @@
+import React from "react";
+import {TrendingUp, Bolt, DonutLarge, AutoGraph, Insights, Flag,} from "@mui/icons-material";
+import {blue,cyan,purple,pink,green,orange,} from "../theme/dashboardTokens";
+
+export const topStats = [
+  {
+    title: "Revenue",
+    value: "$4.75M",
+    change: "+12.5%",
+    colorA: "#4776ff",
+    colorB: "#47c5ff",
+    icon: <TrendingUp />,
+  },
+  {
+    title: "Profit",
+    value: "$1.85M",
+    change: "+8.2%",
+    colorA: "#00b8d9",
+    colorB: "#0ea5e9",
+    icon: <Bolt />,
+  },
+  {
+    title: "Customers",
+    value: "24.5K",
+    change: "+15.3%",
+    colorA: "#7c3aed",
+    colorB: "#a855f7",
+    icon: <DonutLarge />,
+  },
+  {
+    title: "Conversion",
+    value: "18.2%",
+    change: "+4.1%",
+    colorA: "#e879f9",
+    colorB: "#ec4899",
+    icon: <AutoGraph />,
+  },
+  {
+    title: "Avg Order",
+    value: "$194",
+    change: "+6.7%",
+    colorA: "#f59e0b",
+    colorB: "#fb7185",
+    icon: <Insights />,
+  },
+  {
+    title: "Retention",
+    value: "89.4%",
+    change: "+2.8%",
+    colorA: "#14b8a6",
+    colorB: "#22c55e",
+    icon: <Flag />,
+  },
+];
+
+export const divisions = [
+  {
+    name: "Sales & Revenue",
+    owner: "Alexandra Chen",
+    role: "SVP, Global Sales",
+    score: 94,
+    wow: "+5.2%",
+    tone: "#14dba8",
+    metrics: [
+      { name: "Revenue", value: "$84.2M", change: "+8.3%", trend: [58, 61, 69, 66, 73, 76, 79], target: "$80M", progress: 92, changeDir: "up" },
+      { name: "New Deals", value: "247", change: "+12.1%", trend: [42, 49, 56, 54, 61, 64, 68], target: "220", progress: 94, changeDir: "up" },
+      { name: "Win Rate", value: "68.4%", change: "+3.2%", trend: [51, 56, 61, 60, 64, 67, 70], target: "65%", progress: 90, changeDir: "up" },
+      { name: "Avg Deal Size", value: "$342K", change: "-1.4%", trend: [62, 69, 72, 68, 65, 67, 64], target: "$350K", progress: 72, changeDir: "down" },
+      { name: "Pipeline Value", value: "$412M", change: "+15.6%", trend: [38, 42, 47, 51, 54, 57, 61], target: "$380M", progress: 93, changeDir: "up" },
+    ],
+    scoreTrend: [78, 81, 82, 80, 85, 87, 88, 86, 90, 92, 94, 94],
+    summary: {
+      wow: "+5.2%",
+      bestKpi: "Pipeline Value",
+      bestKpiChange: "+15.6%",
+      needsFocus: "Avg Deal Size",
+      needsFocusChange: "-1.4%",
+    },
+  },
+  {
+    name: "Engineering",
+    owner: "Marcus Rivera",
+    role: "CTO",
+    score: 91,
+    wow: "+2.8%",
+    tone: "#6c73ff",
+    metrics: [
+      { name: "Sprint Velocity", value: "142pts", change: "+5.2%", trend: [49, 55, 61, 67, 71, 74, 78], target: "135pts", progress: 89, changeDir: "up" },
+      { name: "Code Quality", value: "96.2%", change: "+0.8%", trend: [67, 71, 75, 77, 81, 84, 86], target: "95%", progress: 95, changeDir: "up" },
+      { name: "Deployment Freq", value: "18/wk", change: "+12.5%", trend: [31, 34, 39, 43, 48, 53, 58], target: "16/wk", progress: 92, changeDir: "up" },
+      { name: "Incident Rate", value: "0.3%", change: "-45%", trend: [76, 71, 69, 61, 55, 49, 43], target: "<0.5%", progress: 87, changeDir: "downGood" },
+      { name: "MTTR", value: "34 min", change: "+6.1%", trend: [52, 57, 60, 64, 67, 72, 76], target: "30 min", progress: 74, changeDir: "up" },
+    ],
+    scoreTrend: [74, 76, 78, 81, 82, 84, 86, 85, 87, 89, 90, 91],
+    summary: {
+      wow: "+2.8%",
+      bestKpi: "Deployment Freq",
+      bestKpiChange: "+12.5%",
+      needsFocus: "MTTR",
+      needsFocusChange: "+6.1%",
+    },
+  },
+  {
+    name: "Marketing",
+    owner: "Sophia Williams",
+    role: "CMO",
+    score: 88,
+    wow: "-1.2%",
+    tone: "#ff4d7a",
+    metrics: [
+      { name: "MQLs Generated", value: "3,842", change: "-6.7%", trend: [73, 70, 68, 63, 60, 58, 55], target: "4,000", progress: 76, changeDir: "down" },
+      { name: "CAC", value: "$127", change: "-8.2%", trend: [75, 72, 69, 64, 60, 56, 52], target: "$135", progress: 88, changeDir: "downGood" },
+      { name: "Brand Awareness", value: "72%", change: "+4.3%", trend: [49, 53, 58, 61, 65, 68, 72], target: "70%", progress: 91, changeDir: "up" },
+      { name: "Content ROI", value: "4.2x", change: "-3.1%", trend: [68, 71, 72, 69, 66, 63, 61], target: "4.5x", progress: 71, changeDir: "down" },
+      { name: "Conversion Lift", value: "18.4%", change: "+2.7%", trend: [41, 44, 46, 49, 53, 56, 59], target: "18%", progress: 90, changeDir: "up" },
+    ],
+    scoreTrend: [82, 84, 86, 87, 89, 88, 90, 91, 90, 89, 88, 88],
+    summary: {
+      wow: "-1.2%",
+      bestKpi: "Brand Awareness",
+      bestKpiChange: "+4.3%",
+      needsFocus: "MQLs Generated",
+      needsFocusChange: "-6.7%",
+    },
+  },
+  {
+    name: "Product",
+    owner: "David Park",
+    role: "CPO",
+    score: 92,
+    wow: "+3.4%",
+    tone: "#8d63ff",
+    metrics: [
+      { name: "Feature Adoption", value: "78%", change: "+5.4%", trend: [45, 49, 56, 63, 68, 72, 78], target: "75%", progress: 91, changeDir: "up" },
+      { name: "NPS Score", value: "72", change: "+4.3%", trend: [51, 55, 59, 62, 66, 69, 72], target: "70", progress: 88, changeDir: "up" },
+      { name: "Time to Market", value: "14 days", change: "-22%", trend: [81, 76, 70, 63, 55, 49, 42], target: "16 days", progress: 94, changeDir: "downGood" },
+      { name: "User Retention", value: "91.2%", change: "+1.8%", trend: [68, 71, 75, 77, 82, 87, 91], target: "90%", progress: 95, changeDir: "up" },
+      { name: "Bug Escape", value: "1.9%", change: "-9.4%", trend: [66, 61, 58, 52, 47, 42, 38], target: "<2.0%", progress: 89, changeDir: "downGood" },
+    ],
+    scoreTrend: [79, 82, 83, 84, 86, 88, 89, 90, 91, 91, 92, 92],
+    summary: {
+      wow: "+3.4%",
+      bestKpi: "Time to Market",
+      bestKpiChange: "-22%",
+      needsFocus: "Feature Adoption",
+      needsFocusChange: "+5.4%",
+    },
+  },
+  {
+    name: "Operations",
+    owner: "Rachel Foster",
+    role: "COO",
+    score: 86,
+    wow: "+1.1%",
+    tone: "#f59e0b",
+    metrics: [
+      { name: "Efficiency Index", value: "92.4%", change: "+2.1%", trend: [60, 63, 67, 72, 76, 82, 86], target: "90%", progress: 89, changeDir: "up" },
+      { name: "Cost Reduction", value: "12.8%", change: "+3.2%", trend: [44, 47, 49, 53, 57, 62, 66], target: "12%", progress: 93, changeDir: "up" },
+      { name: "SLA Compliance", value: "99.2%", change: "+0.4%", trend: [78, 82, 86, 89, 92, 95, 98], target: "99%", progress: 96, changeDir: "up" },
+      { name: "Process Automation", value: "67%", change: "+8.1%", trend: [39, 43, 47, 52, 56, 61, 67], target: "70%", progress: 79, changeDir: "up" },
+      { name: "Downtime", value: "2.1h", change: "-11%", trend: [76, 70, 66, 61, 57, 51, 46], target: "<2.5h", progress: 88, changeDir: "downGood" },
+    ],
+    scoreTrend: [75, 77, 79, 80, 82, 83, 84, 85, 85, 86, 86, 86],
+    summary: {
+      wow: "+1.1%",
+      bestKpi: "Process Automation",
+      bestKpiChange: "+8.1%",
+      needsFocus: "Efficiency Index",
+      needsFocusChange: "+2.1%",
+    },
+  },
+  {
+    name: "People & Culture",
+    owner: "James Mitchell",
+    role: "CHRO",
+    score: 89,
+    wow: "+0.8%",
+    tone: "#16c7ff",
+    metrics: [
+      { name: "Engagement Score", value: "87.5%", change: "+2.3%", trend: [58, 61, 66, 71, 76, 81, 86], target: "85%", progress: 91, changeDir: "up" },
+      { name: "Retention Rate", value: "94.8%", change: "+1.2%", trend: [73, 77, 81, 84, 88, 91, 94], target: "93%", progress: 93, changeDir: "up" },
+      { name: "Time to Hire", value: "18 days", change: "-14.3%", trend: [84, 78, 72, 67, 61, 56, 49], target: "20 days", progress: 92, changeDir: "downGood" },
+      { name: "DEI Index", value: "8.9/10", change: "+3.5%", trend: [46, 50, 57, 62, 68, 74, 79], target: "8.5/10", progress: 90, changeDir: "up" },
+      { name: "Training Completion", value: "96.1%", change: "+2.9%", trend: [61, 67, 73, 78, 84, 90, 96], target: "95%", progress: 95, changeDir: "up" },
+    ],
+    scoreTrend: [76, 79, 81, 82, 84, 85, 86, 87, 88, 88, 89, 89],
+    summary: {
+      wow: "+0.8%",
+      bestKpi: "Time to Hire",
+      bestKpiChange: "-14.3%",
+      needsFocus: "Engagement Score",
+      needsFocusChange: "+2.3%",
+    },
+  },
+  {
+    name: "Finance",
+    owner: "Elena Volkov",
+    role: "CFO",
+    score: 93,
+    wow: "+4.1%",
+    tone: "#f052b5",
+    metrics: [
+      { name: "EBITDA Margin", value: "28.4%", change: "+2.8%", trend: [49, 54, 59, 66, 72, 79, 84], target: "27%", progress: 94, changeDir: "up" },
+      { name: "Cash Flow", value: "$42.1M", change: "+11.2%", trend: [38, 43, 49, 56, 61, 67, 74], target: "$40M", progress: 95, changeDir: "up" },
+      { name: "DSO", value: "32 days", change: "-8.6%", trend: [81, 77, 71, 64, 58, 51, 45], target: "35 days", progress: 91, changeDir: "downGood" },
+      { name: "Budget Variance", value: "1.2%", change: "-40%", trend: [75, 69, 61, 54, 47, 39, 31], target: "<2.0%", progress: 96, changeDir: "downGood" },
+      { name: "Collections", value: "97.2%", change: "+4.7%", trend: [58, 62, 68, 74, 81, 89, 95], target: "95%", progress: 97, changeDir: "up" },
+    ],
+    scoreTrend: [80, 82, 84, 85, 86, 88, 89, 90, 91, 92, 93, 93],
+    summary: {
+      wow: "+4.1%",
+      bestKpi: "Cash Flow",
+      bestKpiChange: "+11.2%",
+      needsFocus: "EBITDA Margin",
+      needsFocusChange: "+2.8%",
+    },
+  },
+  {
+    name: "Customer Success",
+    owner: "Thomas Wright",
+    role: "VP, Customer Success",
+    score: 90,
+    wow: "+2.3%",
+    tone: "#10d4c7",
+    metrics: [
+      { name: "CSAT Score", value: "94.2%", change: "+1.8%", trend: [63, 68, 74, 79, 84, 89, 94], target: "93%", progress: 96, changeDir: "up" },
+      { name: "Churn Rate", value: "1.8%", change: "-25%", trend: [82, 75, 69, 63, 56, 48, 39], target: "<2.0%", progress: 94, changeDir: "downGood" },
+      { name: "Expansion Revenue", value: "$12.4M", change: "+18.1%", trend: [41, 46, 52, 58, 65, 73, 82], target: "$11M", progress: 97, changeDir: "up" },
+      { name: "Avg Resolution", value: "2.1hrs", change: "-30%", trend: [87, 79, 71, 63, 55, 47, 39], target: "<2.5hrs", progress: 95, changeDir: "downGood" },
+      { name: "Renewal Rate", value: "92.7%", change: "+3.9%", trend: [58, 63, 68, 73, 79, 86, 92], target: "91%", progress: 95, changeDir: "up" },
+    ],
+    scoreTrend: [77, 79, 81, 83, 85, 86, 87, 88, 89, 89, 90, 90],
+    summary: {
+      wow: "+2.3%",
+      bestKpi: "Expansion Revenue",
+      bestKpiChange: "+18.1%",
+      needsFocus: "CSAT Score",
+      needsFocusChange: "+1.8%",
+    },
+  },
+];
+
+export const trendData = [
+  { week: "W1", sales: 71, marketing: 69, product: 66 },
+  { week: "W2", sales: 74, marketing: 73, product: 68 },
+  { week: "W3", sales: 78, marketing: 75, product: 71 },
+  { week: "W4", sales: 82, marketing: 79, product: 74 },
+  { week: "W5", sales: 86, marketing: 82, product: 78 },
+  { week: "W6", sales: 91, marketing: 88, product: 84 },
+];
+
+export const rankings = [
+  { name: "Digital Sales", score: 94, change: "+8.2%", color: blue },
+  { name: "Marketing", score: 91, change: "+6.4%", color: cyan },
+  { name: "Customer Success", score: 89, change: "+5.7%", color: purple },
+  { name: "Operations", score: 87, change: "+4.9%", color: pink },
+  { name: "Product", score: 85, change: "+3.8%", color: orange },
+];
+
+export const matrixData = [
+  { label: "High Impact", value: 94, color: blue },
+  { label: "Growth", value: 88, color: cyan },
+  { label: "Efficiency", value: 82, color: purple },
+  { label: "Risk", value: 61, color: pink },
+];
+
+export const insightCards = [
+  {
+    title: "Best Performer",
+    body: "Digital Sales leads the pack with exceptional growth and consistency.",
+    accent: blue,
+  },
+  {
+    title: "Needs Attention",
+    body: "HR adoption remains lowest and requires focused executive support.",
+    accent: orange,
+  },
+  {
+    title: "Strong Momentum",
+    body: "Marketing and Customer Success both show healthy week-on-week improvement.",
+    accent: green,
+  },
+  {
+    title: "Executive Note",
+    body: "Overall dashboard health remains positive with broad-based improvement.",
+    accent: purple,
+  },
+];
+
+export const revenueSegments = [
+  { name: "Enterprise", value: 35, color: blue },
+  { name: "SME", value: 25, color: cyan },
+  { name: "Retail", value: 18, color: purple },
+  { name: "Partnerships", value: 12, color: pink },
+  { name: "Other", value: 10, color: orange },
+];
+
+export const goals = [
+  { name: "Q1 Revenue Goal", value: 78, tone: blue },
+  { name: "Customer Expansion", value: 64, tone: cyan },
+  { name: "Operational Efficiency", value: 82, tone: purple },
+  { name: "Retention Goal", value: 91, tone: green },
+];
+
+export const highlights = [
+  {
+    title: "Digital Sales exceeded target",
+    text: "Revenue contribution outpaced plan for the third consecutive week.",
+    time: "2h ago",
+    tone: blue,
+  },
+  {
+    title: "Marketing campaign conversion improved",
+    text: "Latest funnel optimisation delivered stronger conversion across paid channels.",
+    time: "5h ago",
+    tone: cyan,
+  },
+  {
+    title: "Customer Success reduced churn",
+    text: "Retention actions are beginning to produce measurable gains.",
+    time: "1d ago",
+    tone: purple,
+  },
+];
+
+export const activities = [
+  { actor: "Sarah Chen", action: "updated Digital Sales metrics", time: "10 min ago", color: blue },
+  { actor: "Mike Johnson", action: "posted weekly marketing summary", time: "22 min ago", color: cyan },
+  { actor: "Emma Davis", action: "flagged retention risk reduction", time: "48 min ago", color: purple },
+  { actor: "James Wilson", action: "closed operations milestone", time: "1h ago", color: pink },
+  { actor: "Lisa Park", action: "submitted product delivery update", time: "2h ago", color: orange },
+];
